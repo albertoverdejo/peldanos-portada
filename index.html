@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peldaños</title>
+<meta name="description" content="Peldaños: ejercicios cortos de C++ que se corrigen solos. Cada ejercicio es un peldaño; cada tema, una escalera.">
+<link rel="icon" type="image/png" href="icono.png">
+<link rel="icon" type="image/svg+xml" href="icono.svg">
+<style>
+  @font-face {
+    font-family: "Nunito"; src: url("nunito-latin.woff2") format("woff2");
+    font-weight: 200 1000; font-style: normal; font-display: swap;
+  }
+  :root {
+    --papel: #f3f7fb; --cuadricula: #dbe7f3; --hoja: #fff; --tinta: #17233f; --tinta-suave: #55627d;
+    --raya: #c4d1e3; --boli: #2747c7; --rotulador: #ffd23f; --verde: #12915a;
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 18px; }
+  body {
+    margin: 0; color: var(--tinta); line-height: 1.5;
+    font-family: "Nunito", ui-rounded, "SF Pro Rounded", system-ui, sans-serif;
+    background-color: var(--papel);
+    background-image: linear-gradient(var(--cuadricula) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--cuadricula) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  main { max-width: 920px; margin: 0 auto; padding: 28px 24px 64px; }
+  .marca { display: inline-flex; align-items: flex-end; font-size: 2.6rem; font-weight: 800; line-height: 1;
+    letter-spacing: -0.01em; padding-top: 22px; }
+  /* cada letra sube un poco más que la anterior */
+  .marca span:nth-child(2) { transform: translateY(-3px); }
+  .marca span:nth-child(3) { transform: translateY(-6px); }
+  .marca span:nth-child(4) { transform: translateY(-9px); }
+  .marca span:nth-child(5) { transform: translateY(-12px); }
+  .marca span:nth-child(6) { transform: translateY(-15px); }
+  .marca span:nth-child(7) { transform: translateY(-18px); }
+  .marca span:nth-child(8) { transform: translateY(-21px); }
+  .hoja { background: var(--hoja); border: 2px solid var(--tinta); border-radius: 14px; padding: 28px 32px 32px;
+    margin-top: 24px; box-shadow: 6px 6px 0 var(--raya); }
+  h1 { font-size: 1.7rem; font-weight: 800; line-height: 1.2; margin: 0 0 8px; }
+  h2 { font-size: 1.25rem; font-weight: 800; line-height: 1.2; margin: 0 0 6px; }
+  p { margin: 0.6em 0; max-width: 62ch; }
+  .entrada { font-size: 1.15rem; }
+  .pronto { display: inline-block; margin-top: 10px; padding: 6px 16px; border: 2px solid var(--tinta); border-radius: 999px;
+    background: var(--rotulador); font-weight: 800; }
+  ul { margin: 0.6em 0; padding-left: 1.2em; max-width: 62ch; }
+  li { margin: 0.3em 0; }
+  li::marker { color: var(--verde); }
+  figure { margin: 24px 0 0; }
+  figure img { display: block; width: 100%; height: auto; border: 2px solid var(--tinta); border-radius: 12px; }
+  figcaption { margin-top: 8px; font-size: 0.9rem; color: var(--tinta-suave); }
+  footer { margin-top: 28px; font-size: 0.85rem; color: var(--tinta-suave); }
+  @media (max-width: 600px) { html { font-size: 16px; } .hoja { padding: 20px 18px 22px; } .marca { font-size: 2.1rem; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="marca" role="img" aria-label="Peldaños"><span>P</span><span>e</span><span>l</span><span>d</span><span>a</span><span>ñ</span><span>o</span><span>s</span></div>
+
+  <section class="hoja">
+    <h1>Aprender a programar, peldaño a peldaño</h1>
+    <p class="entrada">Peldaños son ejercicios cortos de C++ que se corrigen solos. Cada ejercicio es un peldaño
+      y cada tema, una escalera: se sube en orden, de lo más fácil a lo más difícil.</p>
+    <p>Desde esta página se entrará a Peldaños. Todavía no está abierta: la estamos preparando.</p>
+    <span class="pronto">Muy pronto</span>
+  </section>
+
+  <section class="hoja">
+    <h2>Cada tema, una escalera</h2>
+    <p>En la escalera se ve lo que llevas subido, el peldaño que te toca y las estrellas que has ganado en cada uno.</p>
+    <figure>
+      <img src="escalera.png" width="1590" height="1050" alt="La escalera del tema 2, Condicionales: once peldaños subidos, en verde y con sus estrellas, y el dibujo de un niño de pie en el peldaño 12, que es el que toca.">
+      <figcaption>La escalera de un tema, a medio subir.</figcaption>
+    </figure>
+  </section>
+
+  <section class="hoja">
+    <h2>Cada ejercicio, un peldaño</h2>
+    <ul>
+      <li><strong>Seis clases de ejercicio</strong>, de menos a más: predecir lo que escribe un programa, arreglarlo,
+        completarlo, ordenar sus líneas, modificarlo y escribirlo entero.</li>
+      <li><strong>Se corrigen con el compilador de verdad</strong>: cualquier programa que funcione vale, no solo
+        el que coincide con la solución.</li>
+      <li><strong>Tres corazones por peldaño</strong>: los que te quedan al acertar son las estrellas que ganas.
+        Y un peldaño se puede repetir para mejorarlas.</li>
+    </ul>
+    <figure>
+      <img src="ejercicio.png" width="1590" height="1350" alt="Un ejercicio de completar: el enunciado, un ejemplo de lo que debe escribir el programa y el código con dos huecos por rellenar.">
+      <figcaption>Un peldaño de «completar»: hay que rellenar los huecos del programa.</figcaption>
+    </figure>
+  </section>
+
+  <footer>Peldaños. El código tiene licencia MIT y los ejercicios, CC BY-SA 4.0.</footer>
+</main>
+</body>
+</html>
